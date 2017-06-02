@@ -1,4 +1,4 @@
-# rpimouse_controller
+# raspimouse_game_controller
 Package for operating Raspberry Pi Mouse with a controller
 
 The script included in this package corresponds to DUALSHOCK 4 and Logicool Wireless Gamepad F710
