@@ -11,7 +11,7 @@ This is a script for manipulating Raspberry Pi Mouse using DUALSHOCK 4. With the
 
 ## logicool_cmd_vel.py
 
-This is a script to operate Raspberry Pi Mouse using Logicool Wireless Gamepad F710. With the X button pressed, you can publish the value of linear by pressing the up and down buttons, and angular values by pressing the right and left buttons.
+This is a script for manipulating Raspberry Pi Mouse using Logicool Wireless Gamepad F710. With the X button pressed, you can publish the value of linear by pressing the up and down buttons, and angular values by pressing the right and left buttons.
 
 # tested on ...
 
