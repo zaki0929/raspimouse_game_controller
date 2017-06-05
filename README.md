@@ -35,19 +35,19 @@ This is a script to operate Raspberry Pi Mouse using Logicool Wireless Gamepad F
 
 * Go to forward
 
-  * □  + ↑
+  * X + ↑
 
 * Go to backward
 
-  * □  + ↓
+  * X + ↓
 
 * Turn to the right
 
-  * □  + →
+  * X + →
 
 * Turn to the left
 
-  * □　+ ←
+  * X + ←
 
 # tested on ...
 
