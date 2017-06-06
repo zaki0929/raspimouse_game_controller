@@ -59,7 +59,7 @@ By pressing the up/down button, you can give the velocity of front/back
 direction respectively.  
 Angular velocity can be then given by pressing the right or left button.
 
-![](./docs/images/ps4.JPG)
+![](./docs/images/DUALSHOCK_4.JPG)
 
 ## logicool_cmd_vel.py
 
@@ -80,5 +80,5 @@ direction respectively.
 Angular velocity can be then given by pressing
 the right or left button.
 
-![](./docs/images/logicool.JPG)
+![](./docs/images/F710.JPG)
 
