@@ -59,6 +59,8 @@ By pressing the up/down button, you can give the velocity of front/back
 direction respectively.  
 Angular velocity can be then given by pressing the right or left button.
 
+![](./docs/images/ps4.JPG)
+
 ## logicool_cmd_vel.py
 
 This is a script for connecting Raspberry Pi Mouse to a Logicool Wireless Gamepad F710. 
@@ -77,4 +79,6 @@ By pressing the up/down button, you can give the velocity of front/back
 direction respectively.  
 Angular velocity can be then given by pressing
 the right or left button.
+
+![](./docs/images/logicool.JPG)
 
