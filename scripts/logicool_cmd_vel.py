@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import rospy
+import rospy, rosparam
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
 from sensor_msgs.msg import Joy
