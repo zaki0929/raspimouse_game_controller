@@ -45,10 +45,11 @@ cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
 
 This is a script for connecting Raspberry Pi Mouse to a DUALSHOCK 4.
 
-To launch this script:
-
+To use this script with raspimouse\_ros\_2, input the following commands.
 ```
-rosrun raspimouse_game_controller ps4_cmd_vel.py
+$ roslaunch raspimouse_ros_2 raspimouse.launch 
+$ rosrun joy joy_node 
+$ rosrun raspimouse_game_controller ps4_cmd_vel.py
 ```
 
 ### how to control
@@ -65,20 +66,20 @@ Angular velocity can be then given by pressing the right or left button.
 
 This is a script for connecting Raspberry Pi Mouse to a Logicool Wireless Gamepad F710. 
 
-To launch this script:
-
+To use this script with raspimouse\_ros\_2, input the following commands.
 ```
-rosrun raspimouse_game_controller logicool_cmd_vel.py
+$ roslaunch raspimouse_ros_2 raspimouse.launch 
+$ rosrun joy joy_node 
+$ rosrun raspimouse_game_controller logicool_cmd_vel.py
 ```
 
 ### how to control
 
-To give motion command, you must press the X button. 
-With the press, you can control the robot with the four arrow buttons.  
-By pressing the up/down button, you can give the velocity of front/back
-direction respectively.  
-Angular velocity can be then given by pressing
-the right or left button.
+Beforehand, the MODE button must be pressed and the LED beside the button
+must be lighted. With the press of the X button, you can control the
+robot with the four arrow buttons. By pressing the up/down button, 
+you can give the velocity of front/back direction respectively.  
+Angular velocity can be then given by pressing the right or left button.
 
 ![](./docs/images/F710.JPG)
 

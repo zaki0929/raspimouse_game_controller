@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find raspimouse_ros_2)/launch/raspimouse.launch" /> 
+  <node pkg="joy" name="joy_node" type="joy_node" required="true">
+    <param name="autorepeat_rate" value="10" />
+  </node>
+  <node pkg="raspimouse_game_controller" name="logicool_cmd_vel"
+	type="logicool_cmd_vel.py" required="true" output="screen" />
+</launch>
