@@ -19,25 +19,16 @@ class JoyTwist(object):
     def joy_callback(self, joy_msg):
         if joy_msg.buttons[7] == 1: self.level += 1
         if joy_msg.buttons[6] == 1: self.level -= 1
-
 	self.level = self.limitter(self.level)
 
         if joy_msg.buttons[0] == 1:
             twist = Twist()
             twist.linear.x = joy_msg.axes[1] * 0.2 * self.level
-            twist.angular.z = joy_msg.axes[0] * 3.14/4 * self.level
-            self._twist_pub.publish(twist)
-#        elif joy_msg.buttons[2] == 1: # B dash
-#            twist = Twist()
-#            twist.linear.x = joy_msg.axes[1] * 0.4
-#            twist.angular.z = joy_msg.axes[0] * 3.14/2
-#            self._twist_pub.publish(twist)
-	elif joy_msg.axes[1] > 0.5:  # analog controller (experiment)
-            twist = Twist()
-            twist.linear.x = joy_msg.axes[3] * 0.2
-            twist.angular.z = joy_msg.axes[2] * 3.14/2
+            twist.angular.z = joy_msg.axes[0] * 3.14/32 * (self.level + 15)
             self._twist_pub.publish(twist)
 
+	if joy_msg.axes[1] == joy_msg.axes[0] == 0:
+	    self.level -= 1
 
 if __name__ == '__main__':
     rospy.wait_for_service('/motor_on')
