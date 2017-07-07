@@ -1,5 +1,6 @@
 <launch>
-  <node pkg="raspimouse_ros_2" name="motors" type="motors.py" required="true" />
+	<include file="$(find raspimouse_ros_2)/launch/raspimouse.launch" />
+<!--  <node pkg="raspimouse_ros_2" name="motors" type="motors.py" required="true" /> -->
   <node pkg="joy" name="joy_node" type="joy_node" required="true">
     <param name="autorepeat_rate" value="3" />
   </node>
