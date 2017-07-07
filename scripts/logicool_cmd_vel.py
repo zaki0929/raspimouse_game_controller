@@ -13,7 +13,7 @@ class JoyTwist(object):
 
     def limitter(self, lvl):
 	if lvl <= 0:	return 1
-	if lvl >= 5: 	return 4
+	if lvl >= 6: 	return 5
 	return lvl
 
     def joy_callback(self, joy_msg):
