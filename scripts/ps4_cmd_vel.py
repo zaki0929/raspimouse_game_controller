@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import rospy
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
 from sensor_msgs.msg import Joy
+
 
 class JoyTwist(object):
     def __init__(self):
@@ -13,8 +15,9 @@ class JoyTwist(object):
         if joy_msg.buttons[0] == 1:
             twist = Twist()
             twist.linear.x = joy_msg.axes[7] * 0.2
-            twist.angular.z = joy_msg.axes[6] * 3.14/4
+            twist.angular.z = joy_msg.axes[6] * 3.14 / 4
             self._twist_pub.publish(twist)
+
 
 if __name__ == '__main__':
     rospy.wait_for_service('/motor_on')
