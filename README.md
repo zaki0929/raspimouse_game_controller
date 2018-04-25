@@ -68,9 +68,12 @@ This is a script for connecting Raspberry Pi Mouse to a Logicool Wireless Gamepa
 
 To use this script with raspimouse\_ros\_2, input the following commands.
 ```
-$ roslaunch raspimouse_ros_2 raspimouse.launch 
-$ rosrun joy joy_node 
-$ rosrun raspimouse_game_controller logicool_cmd_vel.py
+$ roslaunch raspimouse_game_controller run_with_base_nodes.launch
+```
+
+Any `jsX` joy-device can be specified and used with "dev" option, for example:
+```
+$ roslaunch raspimouse_game_controller run_with_base_nodes.launch dev:=/dev/input/js1
 ```
 
 ### How to Control
