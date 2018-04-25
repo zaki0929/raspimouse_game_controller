@@ -12,11 +12,14 @@ class JoyTwist(object):
         self._twist_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 
     def joy_callback(self, joy_msg):
+        twist = Twist()
         if joy_msg.buttons[0] == 1:
-            twist = Twist()
             twist.linear.x = joy_msg.axes[7] * 0.2
             twist.angular.z = joy_msg.axes[6] * 3.14 / 4
-            self._twist_pub.publish(twist)
+        else:
+            twist.linear.x = 0
+            twist.angular.z = 0
+        self._twist_pub.publish(twist)
 
 
 if __name__ == '__main__':

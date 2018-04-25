@@ -16,7 +16,7 @@ This package requires the following to run:
 * ROS
   * Kinetic Kame
 * ROS Package
-  * Raspberry Pi Mouse Controller - [ryuichiueda/raspimouse_ros_2](https://github.com/ryuichiueda/raspimouse_ros_2)
+  * Raspberry Pi Mouse Controller - [ryuichiueda/raspimouse\_ros\_2](https://github.com/ryuichiueda/raspimouse_ros_2)
 
 # Installation
 
@@ -41,7 +41,7 @@ cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
 
 # Usage
 
-## ps4_cmd_vel.py
+## ps4\_cmd\_vel.py
 
 This is a script for connecting Raspberry Pi Mouse to a DUALSHOCK 4.
 
@@ -52,7 +52,7 @@ $ rosrun joy joy_node
 $ rosrun raspimouse_game_controller ps4_cmd_vel.py
 ```
 
-### how to control
+### How to Control
 
 To give motion command, you must press the button drawn a square. 
 With the press, you can control the robot with the four arrow buttons.  
@@ -62,7 +62,7 @@ Angular velocity can be then given by pressing the right or left button.
 
 ![](./docs/images/DUALSHOCK_4.JPG)
 
-## logicool_cmd_vel.py
+## logicool\_cmd\_vel.py
 
 This is a script for connecting Raspberry Pi Mouse to a Logicool Wireless Gamepad F710. 
 
@@ -73,10 +73,15 @@ $ rosrun joy joy_node
 $ rosrun raspimouse_game_controller logicool_cmd_vel.py
 ```
 
-### how to control
+### How to Control
 
-Beforehand, the MODE button must be pressed and the LED beside the button
-must be lighted. With the press of the X button, you can control the
+Beforehand, select __DirectInput__(D) mode, 
+and the MODE button must be pressed and the LED beside the button
+must be lit. 
+
+![](./docs/images/F710_mode_select.jpg)
+
+With the press of the X button, you can control the
 robot with the four arrow buttons. By pressing the up/down button, 
 you can give the velocity of front/back direction respectively.  
 Angular velocity can be then given by pressing the right or left button.

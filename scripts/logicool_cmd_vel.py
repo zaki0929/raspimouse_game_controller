@@ -23,11 +23,14 @@ class JoyTwist(object):
         if joy_msg.buttons[6] == 1: self.level -= 1
         self.level = self.limitter(self.level)
 
+        twist = Twist()
         if joy_msg.buttons[0] == 1:
-            twist = Twist()
             twist.linear.x = joy_msg.axes[1] * 0.2 * self.level
             twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * (self.level + 15)
-            self._twist_pub.publish(twist)
+        else:
+            twist.linear.x = 0
+            twist.angular.z = 0
+        self._twist_pub.publish(twist)
 
         if joy_msg.axes[1] == joy_msg.axes[0] == 0:
             self.level -= 1
